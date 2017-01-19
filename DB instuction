@@ -1,0 +1,50 @@
+CREATE DATABASE ToucanTech;
+
+CREATE TABLE School
+(
+schID int NOT NULL AUTO_INCREMENT,
+name varchar (255) NOT NULL, 
+address varchar (255),
+slug varchar (255) NOT NULL,
+PRIMARY KEY (schID),
+KEY (slug)
+);
+
+
+
+INSERT INTO School (name, address, slug)
+VALUES 
+('The Cavern Club',  '10 Mathew St, Liverpool', 'thecavernclub'), 
+('The Casbah Coffee Club',  '8 Haymans Green, Liverpool','thecasbahcoffeeclub'),
+('Empire',  'Lime St, Liverpool', 'empire'),
+('The Grafton Ballrooms',  'W Derby Rd, Liverpool', 'thegraftonballrooms');
+
+CREATE TABLE Member
+(
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar (255) NOT NULL,
+    email varchar (255),
+    slug varchar (255) NOT NULL,
+    PRIMARY KEY (id),
+    KEY (slug)
+)
+
+INSERT INTO Member (name, email, slug)
+VALUES
+('John Lennon', 'j.lennon@beatlemail.com', 'johnlennon'),
+('Paul McCartney', 'p.mccartney@beatlemail.com', 'paulmccartney'),
+('George Harrison', 'g.harrison@beatlemail.com', 'georgeharrison'),
+('Ringo Starr', 'r.starr@beatlemail.com', 'ringostarr'); 
+
+CREATE TABLE Relations
+(
+    id int NOT NULL,
+    schID int NOT NULL
+);
+
+INSERT INTO Relations
+VALUES
+(1,1),(1,2),(1,3),(1,4),
+(2,4),(2,1),
+(3,1),(3,3),
+(4,2);
