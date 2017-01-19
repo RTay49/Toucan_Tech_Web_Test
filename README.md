@@ -1,7 +1,7 @@
 # Toucan_Tech_Web_Test
 
 
-Introduction This is my ToucanTech web test answer The backend is written in php using the framework codeingighter The database is written in sql set up database with application/config/database.php
+Introduction This is my ToucanTech web test answer The backend is written in php using the framework codeingighter that you will need to install and merge these files with The database is written in sql set up database with application/config/database.php
 
 Install To install extract the html folder on your sever. and write the database instructions in ToucanTech DB into sql then go to localhost.
 
